@@ -1,0 +1,615 @@
+body{
+    background-color: blueviolet;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Barre de navigation */
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    margin: 0 70px;
+    background-color: #fff;
+}
+nav a{
+    font-size: 20px;
+    color: gray;
+    font-style: italic;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav .onglets summary{
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Fin de la Barre de navigation */
+
+/* En-tete*/
+header{
+    background-color: #fff;
+}
+header .title h1{
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-size: 50px;
+    padding: 50px 120px;
+    animation: move-from-left 1s linear ;
+}
+
+header .intro{
+    position: relative;
+    width: 500px;
+    height: 800px;
+    margin: 0px 250px;
+}
+.cercle{
+    background-color: rgb(111, 0, 255);
+    padding: 100px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+    animation: move-from-left 1s linear ;
+}
+header .image{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 2;
+    animation: move-from-right 1s linear;
+}
+.description{
+    background-color: rgb(224, 216, 216);
+    padding: 10px 50px;
+    width: 400px;
+    position: absolute;
+    left: 250px;
+    top: 400px;
+    z-index: 3;
+    animation: move-from-bottom 1s linear;
+}
+.description h2{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.rond{
+    border: 15px solid rgb(111, 0, 255);
+    padding: 30px;
+    border-radius: 100%;
+    position: absolute;
+    top: 500px;
+    z-index: 4;
+    animation: fade 1s linear;
+}
+.description button{
+    background-color: rgb(111, 0, 255);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+/* Fin de En-tete*/
+
+
+/* A propos*/
+.about .descrip{
+    text-align: center;
+    padding: 0 150px 50px 150px;
+    animation: fade 1s linear;
+}
+.descrip h1{
+    color: rgb(111, 0, 255);
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.about p{
+    font-size: 17px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+.about .cards{
+    display: flex;
+    padding: 0 300px;
+    animation: move-from-bottom 1s linear;
+}
+.about .card{
+    background-color: blueviolet;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+/* Fin de A propos*/
+
+/* Section principale */
+
+.main{
+    margin: 50px 0 0 0;
+    background-color: blueviolet;
+}
+.annonce{
+    background-color: #fff;
+    margin: 100px 300px;
+    width: 750px;
+    animation: move-from-bottom 1s linear;
+}
+.annonce button{
+    margin: 15px 250px;
+    color: #fff;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex h2{
+    margin: 0 50px;
+    text-align: left;
+    font-size: xx-large;
+}
+.main .descrip{
+    color: #fff;
+}
+.main .descrip h2{
+    text-align: center;
+    padding: 0 150px 0px 150px;
+    animation: fade 1s linear;
+    font-size: 50px;
+    font-family: sans-serif;
+    animation: move-from-left 1s linear ;
+}
+.main .descrip p{
+    text-align: center;
+    padding: 0 150px 50px 150px;
+    animation: fade 1s linear;
+    margin: 0 150px;
+    animation: move-from-right 1s linear ;
+}
+.cards-box{
+    margin: 20px 400px;
+}
+.cards-box .cards{
+    display: flex;
+}
+.cards-box .cards .card{
+    margin: 0 0 15px 15px;
+    background-color: #fff;
+    animation: fade 1s linear ;
+}
+.card-header, .card-body{
+    text-align: center;
+    text-transform: uppercase;
+}
+.main .bloc, .bloc a{
+    color: #fff;
+    text-align: center;
+}
+.formulaire h1{
+    text-align: center;
+    margin: 50px 200px;
+    font-family: monospace;
+    font-size: 30px;
+    color: #fff;
+    animation: fade 1s linear ;
+}
+.formulaire{
+    width: 75%;
+    margin: 0 100px;
+}
+.formulaire form{
+    color: #fff;
+    width: 50%;
+    margin: 50px 250px;
+    flex-direction: column;
+}
+.formulaire .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formulaire .color{
+    background-color: rgb(250, 84, 43);
+    color: #fff;
+    border: none;
+}
+.form-control{
+    display:block;width:100%;padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+/* Fin de la Section principale */
+
+
+/* Pied de page */
+
+footer{
+    background-color: blueviolet;
+}
+
+/* Fin du Pied de page */
+
+/*Animation*/
+
+@keyframes move-from-left {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes move-from-right {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes move-from-bottom {
+    0%{
+        transform: translateY(200px);
+        transform-origin: bottom top;
+        opacity: 0;
+        
+    } 
+    50%{
+        transform: translateY(100px);
+        transform-origin: bottom top;
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        transform-origin: bottom right;
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*fin de l'Animation*/
+
+/*Responsivité*/
+
+@media screen and (max-width: 768px){
+    header{
+        padding: 0 50px;
+    }
+    header .title h1{
+        font-size: 30px;
+        padding: 50px;
+    }
+    header .intro{
+        position: relative;
+        height: 600px;
+        margin: 0 30px;
+    }
+    .cercle{
+        background-color: rgb(111, 0, 255);
+        padding: 50px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        z-index: 1;
+    }
+    header .image{
+        position: absolute;
+        top: 70px;
+        left: 130px;
+        z-index: 2;
+    }
+    header .intro .image img{
+        width: 400px;
+    }
+    .description{
+        padding: 10px 20px;
+        width: 340px;
+        position: absolute;
+        left: 200px;
+        top: 280px;
+        z-index: 3;
+    }
+    .description h2{
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+    .rond{
+        border: 10px solid rgb(111, 0, 255);
+        padding: 17px;
+        position: absolute;
+        top: 400px;
+        left: 70px;
+        z-index: 4;
+    }
+
+    /********/
+
+    .descrip{
+        text-align: center;
+        padding: 0 50px 50px 50px;
+    }
+    .descrip h1{
+        color: rgb(111, 0, 255);
+        font-size: 30px;
+    }
+    .about p{
+        font-size: 15px;
+    }
+    .about .cards{
+  
+        padding: 0px;
+        flex-wrap: wrap;
+    }
+    .about .card{
+        background-color: blueviolet;
+        color: #fff;
+        padding: 20px;
+        width: 200px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /************/
+
+    .annonce{
+        background-color: #fff;
+        margin: 0px 150px;
+        width: 50%;
+    }
+    .annonce button{
+        width: 50%;
+        margin: 10px 75px;
+        color: #fff;
+        background-color: blueviolet;
+    }
+    .flex h2{
+        margin: 0 50px;
+        font-size: 20px;
+    }
+    .flex .image img{
+        width: 100px;
+    }
+    .main .descrip{
+        margin-top: 50px;
+    }
+    .main .descrip h2{
+        font-size: 30px;
+        margin: 0px;
+    }
+    .main .descrip p{
+        margin: 0 50px;
+        font-size: 15px;
+    }
+    .cards-box{
+        margin: 0;
+        padding: 20px 100px;
+    }
+    .cards-box .cards{
+        display: flex;
+    }
+    .cards-box .cards .card{
+        margin: 10px 10px;
+    }
+    .formulaire h1{
+        text-align: center;
+        margin: 50px 0px;
+        font-size: 30px;
+    }
+    .formulaire{
+        width: 75%;
+        margin: 0 50px;
+    }
+    .formulaire form{
+        width: 75%;
+        margin: 0;
+        padding: 50px 70px;
+    }
+    .form-control{
+        display:block;
+        width:100%;
+        padding:.375rem .75rem;
+        font-size:1rem;
+        font-weight:400;
+        line-height:1.5;
+        color:#212529;
+        background-color:#fff;
+        background-clip:padding-box;
+        border:1px solid #ced4da;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        border-radius:.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    header .title h1{
+        font-size: 25px;
+    }
+    header .intro{
+        position: relative;
+        height: 650px;
+        width: 0px;
+        margin: 0px;
+    }
+    .cercle{
+        background-color: rgb(111, 0, 255);
+        padding: 30px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+    header .image{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+    }
+    header .intro .image img{
+        width: 250px;
+    }
+    .description{
+        padding: 10px 20px;
+        width: 200px;
+        position: absolute;
+        left: 80px;
+        top: 180px;
+    }
+    .description h2{
+        text-transform: uppercase;
+        font-size: 17px;
+    }
+    .rond{
+        opacity: 0;
+    }
+
+    /********/
+
+    .about .descrip{
+        text-align: center;
+        padding: 0px;
+        margin:  50px 50px;
+        width: 50%;
+    }
+    .about .descrip h1{
+        font-size: 20px;
+        width: 100%;
+    }
+    .about .descrip p{
+        font-size: 13px;
+    }
+    .about .cards{
+        width: 100%;
+        padding: 0 30px;
+        flex-wrap: wrap;
+    }
+    .about .cards .card{
+        width: 50%;
+    }
+
+    /************/
+
+    .annonce{
+        background-color: #fff;
+        margin: 0px 50px;
+        width: 300px;
+    }
+    .annonce button{
+        margin: 10px 75px;
+        width: 50%;
+    }
+    .flex h2{
+        margin: 0 30px;
+        font-size: 20px;
+    }
+    .flex .image img{
+        width: 100px;
+    }
+    .main .descrip {
+        margin: 20px 50px;
+        padding: 0;
+        width: 75%;
+    }
+    .main .descrip h2{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .main .descrip p{
+        margin: 0px;
+        font-size: 15px;
+        padding: 10px;
+    }
+    .cards-box{
+        margin: 0;
+        padding: 0px 30px;
+    }
+    .cards-box .cards{
+        display: flex;
+        width: 75%;
+    }
+    .cards-box .cards .card{
+        margin: 10px 10px;
+    }
+    .cards-box .cards .card img{
+        width: 150px;
+        height: auto;
+    }
+    .formulaire h1{
+        text-align: center;
+        margin: 20px;
+        font-size: 15px;
+    }
+    .formulaire{
+        width: 75%;
+        margin: 0px;
+    }
+    .formulaire form{
+        width: 75%;
+        margin: 0;
+        padding: 50px 30px;
+    }
+    .form-control{
+        display:block;
+        width:100%;
+        padding:.375rem .75rem;
+        font-size:1rem;
+        font-weight:400;
+        line-height:1.5;
+        color:#212529;
+        background-color:#fff;
+        background-clip:padding-box;
+        border:1px solid #ced4da;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        border-radius:.25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    }
+}
+
+/*Fin de la Responsivité*/
