@@ -75,6 +75,7 @@ header .image{
     top: 400px;
     z-index: 3;
     animation: move-from-bottom 1s linear;
+    animation-delay: 0s;
 }
 .description h2{
     text-transform: uppercase;
@@ -104,6 +105,7 @@ header .image{
     text-align: center;
     padding: 0 150px 50px 150px;
     animation: fade 1s linear;
+    animation-delay: 2s;
 }
 .descrip h1{
     color: rgb(111, 0, 255);
@@ -118,7 +120,9 @@ header .image{
 .about .cards{
     display: flex;
     padding: 0 300px;
+    flex-wrap: wrap;
     animation: move-from-bottom 1s linear;
+    animation-delay: 2.5s;
 }
 .about .card{
     background-color: blueviolet;
@@ -141,6 +145,7 @@ header .image{
     margin: 100px 300px;
     width: 750px;
     animation: move-from-bottom 1s linear;
+    animation-delay: 3.5s;
 }
 .annonce button{
     margin: 15px 250px;
@@ -169,6 +174,7 @@ header .image{
     font-size: 50px;
     font-family: sans-serif;
     animation: move-from-left 1s linear ;
+    animation-delay: 4s;
 }
 .main .descrip p{
     text-align: center;
@@ -176,6 +182,7 @@ header .image{
     animation: fade 1s linear;
     margin: 0 150px;
     animation: move-from-right 1s linear ;
+    animation-delay: 4s;
 }
 .cards-box{
     margin: 20px 400px;
@@ -187,6 +194,7 @@ header .image{
     margin: 0 0 15px 15px;
     background-color: #fff;
     animation: fade 1s linear ;
+    animation-delay: 5s;
 }
 .card-header, .card-body{
     text-align: center;
@@ -203,6 +211,7 @@ header .image{
     font-size: 30px;
     color: #fff;
     animation: fade 1s linear ;
+    animation-delay: 7.5s;
 }
 .formulaire{
     width: 75%;
@@ -232,80 +241,7 @@ header .image{
 
 /* Pied de page */
 
-footer{
-    background-color: blueviolet;
-}
-
 /* Fin du Pied de page */
-
-/*Animation*/
-
-@keyframes move-from-left {
-    0%{
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    50%{
-        transform: translateX(-100px);
-        opacity: 0.5;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes move-from-right {
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    50%{
-        transform: translateX(100px);
-        opacity: 0.5;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-@keyframes move-from-bottom {
-    0%{
-        transform: translateY(200px);
-        transform-origin: bottom top;
-        opacity: 0;
-        
-    } 
-    50%{
-        transform: translateY(100px);
-        transform-origin: bottom top;
-        opacity: 0.5;
-    }
-    100%{
-        transform: translateY(0px);
-        transform-origin: bottom right;
-        opacity: 1;
-    }
-}
-
-
-@keyframes fade {
-    0%{
-        opacity: 0;
-        transform: scale(0);
-        
-    }
-    50%{
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/*fin de l'Animation*/
 
 /*Responsivité*/
 
@@ -376,7 +312,7 @@ footer{
         font-size: 15px;
     }
     .about .cards{
-  
+        margin: 0 50px;
         padding: 0px;
         flex-wrap: wrap;
     }
@@ -410,19 +346,19 @@ footer{
         width: 100px;
     }
     .main .descrip{
-        margin-top: 50px;
+        margin: 50px 0px 0px 0px;
     }
     .main .descrip h2{
         font-size: 30px;
         margin: 0px;
     }
     .main .descrip p{
-        margin: 0 50px;
+        margin: 0 0px;
         font-size: 15px;
     }
     .cards-box{
-        margin: 0;
-        padding: 20px 100px;
+        margin: 0px;
+        padding: 0px 100px;
     }
     .cards-box .cards{
         display: flex;
@@ -442,7 +378,7 @@ footer{
     .formulaire form{
         width: 75%;
         margin: 0;
-        padding: 50px 70px;
+        padding: 20px 70px;
     }
     .form-control{
         display:block;
@@ -465,47 +401,49 @@ footer{
 
 
 @media screen and (max-width: 425px){
+    nav{
+        margin: 10px 0px;
+    }
     header .title h1{
-        font-size: 25px;
+        font-size: 17px;
     }
     header .intro{
-        position: relative;
-        height: 650px;
+        height: 550px;
         width: 0px;
         margin: 0px;
     }
     .cercle{
-        background-color: rgb(111, 0, 255);
         padding: 30px;
         width: 50px;
         height: 50px;
-        position: absolute;
         top: 0px;
         left: 0px;
-        z-index: 1;
     }
     header .image{
-        position: absolute;
         top: 50px;
         left: 50px;
-        z-index: 2;
     }
     header .intro .image img{
         width: 250px;
     }
     .description{
-        padding: 10px 20px;
+        padding: 10px 10px;
         width: 200px;
         position: absolute;
-        left: 80px;
-        top: 180px;
+        left: 100px;
+        top: 170px;
     }
     .description h2{
         text-transform: uppercase;
-        font-size: 17px;
+        font-size: 15px;
+    }
+    .description p{
+        font-size: 12px;
     }
     .rond{
-        opacity: 0;
+        left: 0;
+        top: 300px;
+        border: 7px solid blueviolet;
     }
 
     /********/
@@ -513,23 +451,31 @@ footer{
     .about .descrip{
         text-align: center;
         padding: 0px;
-        margin:  50px 50px;
-        width: 50%;
+        margin:  20px 0px;
+        width: 100%;
     }
     .about .descrip h1{
-        font-size: 20px;
+        font-size: 17px;
         width: 100%;
     }
     .about .descrip p{
-        font-size: 13px;
+        font-size: 12px;
     }
     .about .cards{
         width: 100%;
-        padding: 0 30px;
+        padding: 0 0px;
         flex-wrap: wrap;
+        margin: 0 50px;
     }
     .about .cards .card{
         width: 50%;
+        padding: 10px;
+    }
+    .about .cards .card h3{
+        font-size: medium;
+    }
+    .about .cards .card li{
+        font-size: small;
     }
 
     /************/
@@ -585,13 +531,13 @@ footer{
         font-size: 15px;
     }
     .formulaire{
-        width: 75%;
+        width: 100%;
         margin: 0px;
     }
     .formulaire form{
         width: 75%;
         margin: 0;
-        padding: 50px 30px;
+        padding: 50px ;
     }
     .form-control{
         display:block;
@@ -612,4 +558,261 @@ footer{
     }
 }
 
+@media screen and (max-width: 375px) {
+    nav{
+        margin: 0 10px;
+    }
+    nav a{
+        font-size: 15px;
+    }
+    nav .onglets summary{
+        font-size: 15px;
+    }
+    /* Fin de la Barre de navigation */
+    
+    /* En-tete*/
+    header .title h1{
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    
+    header .intro{
+        width: 300px;
+        height: 450px;
+        margin: 0px 0px;
+    }
+    .cercle{
+        padding: 10px;
+    }
+    header .image{
+        top: 30px;
+        left: 30px;
+    }
+    header .intro .image img{
+        width: 200px;
+    }
+    .description{
+        padding: 10px;
+        width: 200px;
+        left: 50px;
+        top: 120px;
+    }
+    .description h2{
+        font-size: 15px;
+    }
+    .description p{
+        font-size: small;
+    }
+    .rond{
+        border: 5px solid rgb(111, 0, 255);
+        padding: 10px;
+        top: 250px;
+        left: 0;
+    }
+    .description button{
+        padding: 10px;
+    }
+    /* Fin de En-tete*/
+    
+    
+    /* A propos*/
+    .about .descrip{
+        margin: 0px;
+        width: 100%;
+    }
+    .descrip h1{
+        font-size: 15px;
+    }
+    .about .descrip p{
+        font-size: 12px;
+    }
+    .about .cards{
+        padding: 0px;
+        margin: 20px 30px;
+    }
+    .about .card{
+        padding: 10px;
+        width: 100%;
+    }
+    .about .cards .card h3{
+        font-size: small;
+    }
+    .about .cards .card li{
+        font-size: x-small;
+    }
+     /* Fin de A propos*/
+
+    
+    /* Section principale */
+    
+    .main{
+        margin: 30px 0 0 0;
+    }
+    .annonce{
+        margin: 0px 30px;
+        width: 75%;
+    }
+    .annonce button{
+        margin: 5px 50px;
+        padding: 0px;
+    }
+    .flex h2{
+        margin: 0 10px;
+        font-size: large;
+    }
+    .main .descrip h2{
+        padding: 0px;
+        font-size: 20px;
+    }
+    .main .descrip p{
+        padding: 10px 0;
+        margin: 0 15px;
+        font-size: 12px;
+    }
+    .cards-box{
+        margin: 30px;
+    }
+    .cards-box .cards .card{
+        margin: 0 10px 10px 0;
+    }
+    .cards-box .cards .card img{
+        width: 120px;
+    }
+    .card-header h4, .card-body h5{
+        font-size: smaller;
+    }
+    .formulaire h1{
+        margin: 20px 0px;
+        font-size: 15px;
+    }
+    .formulaire{
+        width: 100%;
+        margin: 0px;
+    }
+    .formulaire form{
+        width: 75%;
+        margin: 0px;
+        padding: 0 30px;
+    }
+    /* Fin de la Section principale */
+}
+
 /*Fin de la Responsivité*/
+
+
+@media screen and (max-width: 320px) {
+    nav{
+        margin: 0px;
+    }
+    header .title h1{
+        font-size: 15px;
+        padding: 10px 0px;
+    }
+    header .intro{
+        left: -40px;
+    }    
+    .main .descrip h2{
+        padding: 0px;
+        font-size: medium;
+    }
+    .main .descrip p{
+        padding: 10px 0;
+        margin: 0 15px;
+        font-size: x-small;
+    }
+    .cards-box{
+        margin: 0px;
+    }
+    .cards-box .cards .card{
+        margin: 0 10px 10px 0;
+    }
+    .cards-box .cards .card img{
+        width: 120px;
+    }
+    .card-header h4, .card-body h5{
+        font-size: smaller;
+    }
+    .formulaire h1{
+        margin: 20px 0px;
+        font-size: 15px;
+    }
+    .formulaire{
+        width: 100%;
+        margin: 0px;
+    }
+    .formulaire form{
+        width: 75%;
+        margin: 0px;
+        padding: 0 30px;
+    }
+    /* Fin de la Section principale */
+}
+
+/*Fin de la Responsivité*/
+
+
+/*Animation*/
+
+@keyframes move-from-left {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes move-from-right {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes move-from-bottom {
+    0%{
+        transform: translateY(200px);
+        transform-origin: bottom top;
+        opacity: 0;
+        
+    } 
+    50%{
+        transform: translateY(100px);
+        transform-origin: bottom top;
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        transform-origin: bottom right;
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        
+    }
+    50%{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*fin de l'Animation*/
